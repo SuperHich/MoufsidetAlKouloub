@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/principal_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/mainscreen_bg" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@android:color/transparent" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/stage1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/stage" >
+
+                <ImageView
+                    android:id="@+id/book_1"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="110dp"
+                    android:layout_toRightOf="@+id/book_2"/>
+
+                <ImageView
+                    android:id="@+id/book_2"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toRightOf="@+id/center_stage1_layout"/>
+                
+                <View android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/center_stage1_layout"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/book_3"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@+id/center_stage1_layout" />
+
+                <ImageView
+                    android:id="@+id/book_4"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@+id/book_3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/stage2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/stage" >
+
+                <ImageView
+                    android:id="@+id/book_5"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="110dp"
+                    android:layout_toRightOf="@+id/book_6" />
+
+                <ImageView
+                    android:id="@+id/book_6"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toRightOf="@+id/center_stage2_layout" />
+                
+                <View android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/center_stage2_layout"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/book_7"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@id/center_stage2_layout" />
+
+                <ImageView
+                    android:id="@+id/book_8"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@id/book_7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/stage3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/stage" >
+
+                <ImageView
+                    android:id="@+id/book_9"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="110dp"
+                    android:layout_toRightOf="@id/book_10"  />
+
+                <ImageView
+                    android:id="@+id/book_10"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toRightOf="@+id/center_stage3_layout" />
+                
+                <View android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/center_stage3_layout"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/book_11"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@id/center_stage3_layout" />
+
+                <ImageView
+                    android:id="@+id/book_12"
+                    android:layout_width="110dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@id/book_11" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/new_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_second_plan" />
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/info"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="50dp"
+        android:background="@drawable/info_selector" />
+
+</RelativeLayout>

@@ -1,0 +1,270 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/principal_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#fff" >
+
+    <com.joanzapata.pdfview.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#fff" />
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_shape"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <ImageView
+            android:id="@+id/pdf_back"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pdf_back" />
+
+        <ImageView
+            android:id="@+id/pdf_list"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pdf_list" />
+
+        <ImageView
+            android:id="@+id/pdf_crop"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pdf_crop" />
+
+        <ImageView
+            android:id="@+id/pdf_bookmark_list"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pdf_bookmark_list" />
+
+        <ImageView
+            android:id="@+id/pdf_bookmark"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pdf_bookmark" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/preview_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_background"
+            android:padding="5dp"
+            android:textColor="#ffffff" />
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:paddingLeft="25dp"
+            android:paddingRight="40dp"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@android:color/transparent"
+            android:thumbOffset="0dp" >
+        </SeekBar>
+
+        <LinearLayout
+            android:id="@+id/preview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:weightSum="14" >
+
+            <ImageView
+                android:id="@+id/preview14"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview13"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview12"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview11"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview10"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview9"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview8"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview7"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview6"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview5"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview4"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview3"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview2"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/preview1"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+</RelativeLayout>

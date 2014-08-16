@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">أعمال القلوب</string>
+    <string name="share">شارك</string>
+    <string name="page_num">صفحة رقم</string>
+    <string name="saving_image">جاري حفظ الصورة</string>
+
+</resources>
