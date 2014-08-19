@@ -28,6 +28,7 @@ import org.vudroid.core.DecodeService;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -38,7 +39,6 @@ import android.graphics.RectF;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.SurfaceView;
 
 import com.joanzapata.pdfview.exception.FileNotFoundException;
@@ -201,6 +201,9 @@ public class PDFView extends SurfaceView {
         dragPinchManager = new DragPinchManager(this);
 
         paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setFilterBitmap(true);
+        paint.setDither(true);
         debugPaint = new Paint();
         debugPaint.setStyle(Style.STROKE);
         maskPaint = new Paint();
@@ -445,7 +448,8 @@ public class PDFView extends SurfaceView {
             return;
         }
 
-        canvas.drawBitmap(renderedBitmap, srcRect, dstRect, paint);
+        Bitmap converted = renderedBitmap.copy(Config.ARGB_8888, false);
+        canvas.drawBitmap(converted, srcRect, dstRect, paint);
 
         if (Constants.DEBUG_MODE) {
             debugPaint.setColor(part.getUserPage() % 2 == 0 ? Color.RED : Color.BLUE);
