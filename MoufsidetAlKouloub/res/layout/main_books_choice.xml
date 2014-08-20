@@ -171,35 +171,6 @@
                     android:layout_toLeftOf="@+id/stage5_center_layout"/>
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/stage6"
-                android:layout_width="match_parent"
-                android:layout_height="200dp" 
-                android:background="@drawable/stage">
-
-                 <ImageView
-                    android:id="@+id/book_11"
-                    android:layout_width="100dp"
-                    android:layout_height="140dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="32dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_toRightOf="@+id/stage6_center_layout"/>
-                
-                <View android:id="@+id/stage6_center_layout" 
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_centerInParent="true"/>
-
-                <ImageView
-                    android:id="@+id/book_12"
-                    android:layout_width="100dp"
-                    android:layout_height="140dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="32dp"
-                    android:layout_toLeftOf="@+id/stage6_center_layout"/>
-            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 

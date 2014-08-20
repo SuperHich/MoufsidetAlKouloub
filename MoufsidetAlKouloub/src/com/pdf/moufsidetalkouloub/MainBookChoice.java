@@ -40,7 +40,7 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 
 	private Button info ;
 	private ImageView book_1, book_2, book_3, book_4 ,book_5 ,book_6 ,
-	book_7,book_8 , book_9 , book_10 ,book_11, book_12 , img_cover;
+	book_7,book_8 , book_9 , book_10, img_cover;
 
 	private ArrayList<Book> books;
 
@@ -126,8 +126,6 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 		book_8 = (ImageView) findViewById(R.id.book_8);
 		book_9 = (ImageView) findViewById(R.id.book_9);
 		book_10 = (ImageView) findViewById(R.id.book_10);
-		book_11 = (ImageView) findViewById(R.id.book_11);
-		book_12 = (ImageView) findViewById(R.id.book_12);
 
 
 		int w = book_1.getWidth();
@@ -180,14 +178,6 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 				book_10.setTag(i);
 				book_10.setBackgroundDrawable(d);
 				break;
-			case 11:
-				book_11.setTag(i);
-				book_11.setBackgroundDrawable(d);
-				break;
-			case 12:
-				book_12.setTag(i);
-				book_12.setBackgroundDrawable(d);
-				break;
 			default :
 				break;
 			}
@@ -204,8 +194,6 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 		book_8.setOnClickListener(this);
 		book_9.setOnClickListener(this);
 		book_10.setOnClickListener(this);
-		book_11.setOnClickListener(this);
-		book_12.setOnClickListener(this);
 
 
 		info.setOnClickListener(new OnClickListener() {
@@ -238,6 +226,7 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 
 		public void handleMessage(Message msg) {
 
+			if (!isFinished){
 			Intent i = new Intent(MainBookChoice.this, PDFViewerActivity.class) ;
 			i.putExtra("book", pdfFile);
 			i.putExtra("book_id", book_id);
@@ -245,7 +234,7 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 			startActivity(i);
 			overridePendingTransition(R.anim.left_in, R.anim.left_out);
 			finish();
-
+			}
 			super.handleMessage(msg);
 		}
 	};
@@ -424,8 +413,6 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 		book_8 = null;
 		book_9 = null;
 		book_10 = null;
-		book_11 = null;
-		book_12 = null;
 
 		img_cover = null;
 	}

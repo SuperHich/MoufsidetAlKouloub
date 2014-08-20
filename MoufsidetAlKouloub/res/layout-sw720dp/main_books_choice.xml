@@ -123,17 +123,17 @@
                 android:layout_height="300dp"
                 android:background="@drawable/stage" >
 
-                <ImageView
-                    android:id="@+id/book_9"
-                    android:layout_width="110dp"
-                    android:layout_height="153dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="50dp"
-                    android:layout_marginRight="110dp"
-                    android:layout_toRightOf="@id/book_10"  />
+<!--                 <ImageView -->
+<!--                     android:id="@+id/book_9" -->
+<!--                     android:layout_width="110dp" -->
+<!--                     android:layout_height="153dp" -->
+<!--                     android:layout_alignParentBottom="true" -->
+<!--                     android:layout_marginBottom="50dp" -->
+<!--                     android:layout_marginRight="110dp" -->
+<!--                     android:layout_toRightOf="@id/book_10"  /> -->
 
                 <ImageView
-                    android:id="@+id/book_10"
+                    android:id="@+id/book_9"
                     android:layout_width="110dp"
                     android:layout_height="153dp"
                     android:layout_alignParentBottom="true"
@@ -147,7 +147,7 @@
                     android:layout_centerInParent="true"/>
 
                 <ImageView
-                    android:id="@+id/book_11"
+                    android:id="@+id/book_10"
                     android:layout_width="110dp"
                     android:layout_height="153dp"
                     android:layout_alignParentBottom="true"
@@ -155,14 +155,14 @@
                     android:layout_marginRight="25dp"
                     android:layout_toLeftOf="@id/center_stage3_layout" />
 
-                <ImageView
-                    android:id="@+id/book_12"
-                    android:layout_width="110dp"
-                    android:layout_height="153dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="50dp"
-                    android:layout_marginRight="25dp"
-                    android:layout_toLeftOf="@id/book_11" />
+<!--                 <ImageView -->
+<!--                     android:id="@+id/book_12" -->
+<!--                     android:layout_width="110dp" -->
+<!--                     android:layout_height="153dp" -->
+<!--                     android:layout_alignParentBottom="true" -->
+<!--                     android:layout_marginBottom="50dp" -->
+<!--                     android:layout_marginRight="25dp" -->
+<!--                     android:layout_toLeftOf="@id/book_11" /> -->
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

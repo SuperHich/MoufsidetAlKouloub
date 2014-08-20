@@ -19,7 +19,7 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 public class PDFDataBase extends SQLiteAssetHelper {
 
-    private static final String DATABASE_NAME = "HeartsWorks_v_1.0.sqlite";
+    private static final String DATABASE_NAME = "HeartsCorrupts_v_1.0.sqlite";
     private static final int DATABASE_VERSION = 1;
     
     private static final String TABLE_BOOKMARK = "BookMark";
@@ -49,13 +49,15 @@ public class PDFDataBase extends SQLiteAssetHelper {
 		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
 		String sqlTable = "BooksContents_content";
-		String whereClause = "c0BookID = ?";
+		String whereClause = "c0BookID LIKE ?";
 		
 		String[] whereArgs = {String.valueOf(bookId)};
 		
 		qb.setTables(sqlTable);
 		Cursor c = qb.query(db, null, whereClause, whereArgs, null, null, null);
 
+		Log.i("VIVIVIVIV", c.getCount()+""+"...."+bookId);
+		
 		ArrayList<BookPart> parts = new ArrayList<BookPart>();
 		if(c.moveToFirst())
 			do{
