@@ -52,7 +52,7 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 
 	private AnimationSet animationSet, animationSet2, animationSet3;
 	private TranslateAnimation translate;
-	private Animation zoomin, alpha, alphaToHide, zoomin2;
+	private Animation alpha, alphaToHide, zoomin2;
 	private AKManager akManager;
 
 	private boolean isFinished = false;
@@ -74,9 +74,6 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 
 		akManager = AKManager.getInstance(this);
 		books = akManager.getBooks();
-
-		if (isTablet)  zoomin = AnimationUtils.loadAnimation(this, R.anim.zoom_in_tablet7);
-		else zoomin = AnimationUtils.loadAnimation(this, R.anim.zoom_in);
 
 		zoomin2 = AnimationUtils.loadAnimation(this, R.anim.zoomin_2);
 		alpha = AnimationUtils.loadAnimation(this, R.anim.alpha);
@@ -200,9 +197,11 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 			@Override
 			public void onClick(View arg0) {
 
-				startActivity(new Intent(MainBookChoice.this, AboutActivity.class));
-				overridePendingTransition(R.anim.left_in, R.anim.left_out);
-				finish();
+				if(isClickEnabled){
+					startActivity(new Intent(MainBookChoice.this, AboutActivity.class));
+					overridePendingTransition(R.anim.left_in, R.anim.left_out);
+					finish();
+				}
 			}
 		});
 
@@ -227,13 +226,13 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 		public void handleMessage(Message msg) {
 
 			if (!isFinished){
-			Intent i = new Intent(MainBookChoice.this, PDFViewerActivity.class) ;
-			i.putExtra("book", pdfFile);
-			i.putExtra("book_id", book_id);
+				Intent i = new Intent(MainBookChoice.this, PDFViewerActivity.class) ;
+				i.putExtra("book", pdfFile);
+				i.putExtra("book_id", book_id);
 
-			startActivity(i);
-			overridePendingTransition(R.anim.left_in, R.anim.left_out);
-			finish();
+				startActivity(i);
+				overridePendingTransition(R.anim.left_in, R.anim.left_out);
+				finish();
 			}
 			super.handleMessage(msg);
 		}
@@ -296,49 +295,35 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 	int animCounter = 0;
 	private void moveViewToScreenCenter( final View view )
 	{
-		DisplayMetrics dm = new DisplayMetrics();
-		getWindowManager().getDefaultDisplay().getMetrics( dm );
-		int statusBarOffset = dm.heightPixels - principal_layout.getMeasuredHeight();
+	    DisplayMetrics dm = new DisplayMetrics();
+	    this.getWindowManager().getDefaultDisplay().getMetrics( dm );
+	    int statusBarOffset = dm.heightPixels - principal_layout.getMeasuredHeight();
 
-		int originalPos[] = new int[2];
-		view.getLocationOnScreen( originalPos );
+	    int originalPos[] = new int[2];
+	    view.getLocationOnScreen( originalPos );
 
-		//	    int xDest = dm.widthPixels/2;
-		//	    xDest -= (book_1.getMeasuredWidth()/2);
-		//	    int yDest = dm.heightPixels/2 - (book_1.getMeasuredHeight()/2) - statusBarOffset;
+	    int xDest = dm.widthPixels/2;
+	    xDest -= (view.getMeasuredWidth()/2);
+	    int yDest = dm.heightPixels/2 - (view.getMeasuredHeight()/2) - statusBarOffset;
 
-		Log.e("TAG", view.getTag().toString());
-
-		int xDelta , yDelta ;
-		
-		if (isTablet){
-			xDelta = dm.widthPixels /4 - view.getMeasuredWidth() /2 - originalPos[0]/2;
-			yDelta = dm.heightPixels /4- view.getMeasuredHeight() /2 - originalPos[1]/2;
-		} else 
-		{
-			xDelta = dm.widthPixels /3 - view.getMeasuredWidth() /2 - originalPos[0]/2;
-			yDelta = dm.heightPixels /3 - view.getMeasuredHeight() /2 - originalPos[1]/2;
-		}
-
-		translate = new TranslateAnimation( 0, xDelta  , 0, yDelta);
-		//  translate = new TranslateAnimation( 0, xDest - originalPos[0] , 0, yDest - originalPos[1] );
-		translate.setDuration(100);
-		translate.setFillAfter( true );
-
-		translate.setAnimationListener(new AnimationListener() {
-
+	    translate = new TranslateAnimation( 0, xDest - originalPos[0] , 0, yDest - originalPos[1] );
+	    translate.setDuration(100);
+	    translate.setFillAfter( true );
+	    
+	    translate.setAnimationListener(new AnimationListener() {
+			
 			@Override
 			public void onAnimationStart(Animation animation) {
 				// TODO Auto-generated method stub
-
+				
 			}
-
+			
 			@Override
 			public void onAnimationRepeat(Animation animation) {
 				// TODO Auto-generated method stub
-
+				
 			}
-
+			
 			@Override
 			public void onAnimationEnd(Animation animation) {
 				if(animCounter == 0)
@@ -348,12 +333,12 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 				}
 			}
 		});
-
-		AlphaAnimation alphaFictive = new AlphaAnimation( 0, 0);
-		alphaFictive.setDuration(100);
-		alphaFictive.setFillAfter( false );
-
-		animationSet = new AnimationSet(true);
+	    
+	    AlphaAnimation alphaFictive = new AlphaAnimation( 0, 0);
+	    alphaFictive.setDuration(100);
+	    alphaFictive.setFillAfter( false );
+	    
+	    animationSet = new AnimationSet(true);
 		animationSet.addAnimation(alphaFictive);
 		animationSet.addAnimation(translate);
 		animationSet.setFillAfter(false);
@@ -371,22 +356,17 @@ public class MainBookChoice extends MySuperScaler implements OnClickListener {
 			public void onAnimationEnd(Animation arg0) {
 				translate.setDuration(1500);
 				animationSet2.addAnimation(translate);
-				animationSet2.addAnimation(zoomin);
-
-				view.startAnimation(animationSet2);
 				
-				if (isTablet) mHandler.sendMessageDelayed(new Message(), 800);
-				else
-					mHandler.sendMessageDelayed(new Message(), 1000);
+				view.startAnimation(animationSet2);
+				mHandler.sendMessageDelayed(new Message(), 1400);
 			}
 		});
-
+		
 		animationSet2 = new AnimationSet(true);
 		animationSet2.addAnimation(alphaToHide);
 		animationSet2.setFillAfter(true);
-
-		view.startAnimation(animationSet);
-
+		
+	    view.startAnimation(animationSet);
 	}
 
 	@Override
