@@ -9,6 +9,12 @@ import android.widget.Button;
 
 import com.pdf.moufsidetalkouloub.utils.MySuperScaler;
 
+/**
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
+ */
+
 public class AboutActivity extends MySuperScaler{
 
 	Button more_apps, share ;

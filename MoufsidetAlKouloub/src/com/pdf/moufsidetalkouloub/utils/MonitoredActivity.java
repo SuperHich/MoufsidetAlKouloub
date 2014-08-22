@@ -15,18 +15,20 @@ import android.os.Debug;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.TextView;
 
 import com.pdf.moufsidetalkouloub.externals.PDFDataBase;
 
 /**
  * This is Super Scaler
  *
+ *
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
  */
+ 
 public class MonitoredActivity extends Activity  {
 	
 	private final ArrayList<LifeCycleListener> mListeners =

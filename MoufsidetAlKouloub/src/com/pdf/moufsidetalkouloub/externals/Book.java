@@ -1,5 +1,11 @@
 package com.pdf.moufsidetalkouloub.externals;
 
+/**
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
+ */
+
 public class Book {
 	
 	private int id;

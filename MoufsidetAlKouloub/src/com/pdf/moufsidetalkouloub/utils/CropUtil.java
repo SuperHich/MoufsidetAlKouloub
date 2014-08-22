@@ -15,7 +15,6 @@ package com.pdf.moufsidetalkouloub.utils;
  * limitations under the License.
  */
 
-
 import java.io.Closeable;
 
 import android.app.Activity;
@@ -30,7 +29,12 @@ import android.view.Surface;
 
 /**
  * Collection of utility functions used in this package.
+ *
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
  */
+
 public class CropUtil {
 
     private static final String TAG = "db.Util";

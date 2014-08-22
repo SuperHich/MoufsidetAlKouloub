@@ -34,6 +34,12 @@ import com.pdf.moufsidetalkouloub.externals.Book;
 import com.pdf.moufsidetalkouloub.utils.MySuperScaler;
 import com.pdf.moufsidetalkouloub.utils.Utils;
 
+/**
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
+ */
+
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 @SuppressLint("HandlerLeak")
 public class MainBookChoice extends MySuperScaler implements OnClickListener {

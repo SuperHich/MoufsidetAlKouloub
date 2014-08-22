@@ -49,6 +49,12 @@ import com.joanzapata.pdfview.listener.OnPageChangeListener;
 import com.pdf.moufsidetalkouloub.externals.AKManager;
 import com.pdf.moufsidetalkouloub.utils.MySuperScaler;
 
+/**
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
+ */
+
 public class PDFViewerActivity extends MySuperScaler implements OnLoadCompleteListener, OnPageChangeListener, OnSeekBarChangeListener {
 
 	private PDFView pdf ;

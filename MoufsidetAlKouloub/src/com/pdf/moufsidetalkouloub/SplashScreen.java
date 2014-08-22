@@ -9,7 +9,11 @@ import android.view.KeyEvent;
 
 import com.pdf.moufsidetalkouloub.utils.MySuperScaler;
 
-
+/**
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
+ */
 
 @SuppressLint("HandlerLeak")
 public class SplashScreen extends MySuperScaler {

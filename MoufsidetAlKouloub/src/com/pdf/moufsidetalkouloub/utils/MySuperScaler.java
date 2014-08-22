@@ -26,7 +26,12 @@ import com.pdf.moufsidetalkouloub.externals.PDFDataBase;
 /**
  * This is Super Scaler
  *
+ *
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
  */
+ 
 @SuppressLint("NewApi")
 public class MySuperScaler extends FragmentActivity  {
 	

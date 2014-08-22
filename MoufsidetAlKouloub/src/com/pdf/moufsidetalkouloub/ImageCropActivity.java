@@ -20,6 +20,12 @@ import com.pdf.moufsidetalkouloub.externals.AKManager;
 import com.pdf.moufsidetalkouloub.utils.CropUtil;
 import com.pdf.moufsidetalkouloub.utils.MonitoredActivity;
 
+/**
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
+ */
+
 public class ImageCropActivity extends MonitoredActivity{
 	
 	public static final  String IMAGE_PATH 				= "image-path";

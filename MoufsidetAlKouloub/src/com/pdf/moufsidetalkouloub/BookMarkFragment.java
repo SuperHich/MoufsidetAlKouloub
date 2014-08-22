@@ -20,6 +20,11 @@ import com.pdf.moufsidetalkouloub.adapters.BookMarkAdapter;
 import com.pdf.moufsidetalkouloub.externals.BookMark;
 import com.pdf.moufsidetalkouloub.externals.PDFDataBase;
 
+/**
+ * Moufsideet Al Kouloub
+ * @author HICHEM LAROUSSI - RAMI TRABELSI
+ * Copyright (c) 2014 Zad Group. All rights reserved.
+ */
 
 @SuppressLint("ValidFragment")
 public class BookMarkFragment extends ListFragment{
